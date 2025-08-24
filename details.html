@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your E-Commerce Store</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9f9385f8ca.js" crossorigin="anonymous"></script>
+    <style>
+        .product-thumb {
+            height: 60px;
+            width: 60px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 8px;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .product-thumb.active {
+            border-color: #0d6efd;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="home.html">ShopEase</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="details.html">Our Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="checkout.html">Checkout</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">Cart <span id="cart-count"
+                                class="badge bg-primary">0</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="product-detail py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <!-- Product Selector Tabs -->
+                <div class="col-12 mb-4">
+                    <ul class="nav nav-pills flex-wrap" id="productTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="tab0" data-bs-toggle="pill" data-bs-target="#product0"
+                                type="button" role="tab">Crochet Bag</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tab1" data-bs-toggle="pill" data-bs-target="#product1"
+                                type="button" role="tab">Resin Earrings</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tab2" data-bs-toggle="pill" data-bs-target="#product2"
+                                type="button" role="tab">Crochet Keychain</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tab3" data-bs-toggle="pill" data-bs-target="#product3"
+                                type="button" role="tab">Crochet Pouch</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tab4" data-bs-toggle="pill" data-bs-target="#product4"
+                                type="button" role="tab">Resin Ring</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tab5" data-bs-toggle="pill" data-bs-target="#product5"
+                                type="button" role="tab">Crochet Coaster</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tab6" data-bs-toggle="pill" data-bs-target="#product6"
+                                type="button" role="tab">Resin Pendant</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tab7" data-bs-toggle="pill" data-bs-target="#product7"
+                                type="button" role="tab">Crochet Flower</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tab8" data-bs-toggle="pill" data-bs-target="#product8"
+                                type="button" role="tab">Resin Bracelet</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tab9" data-bs-toggle="pill" data-bs-target="#product9"
+                                type="button" role="tab">Crochet Hat</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tab10" data-bs-toggle="pill" data-bs-target="#product10"
+                                type="button" role="tab">Resin Brooch</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tab11" data-bs-toggle="pill" data-bs-target="#product11"
+                                type="button" role="tab">Crochet Scrunchie</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tab12" data-bs-toggle="pill" data-bs-target="#product12"
+                                type="button" role="tab">Resin Bookmarks</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tab13" data-bs-toggle="pill" data-bs-target="#product13"
+                                type="button" role="tab">Resin Key Chains</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tab14" data-bs-toggle="pill" data-bs-target="#product14"
+                                type="button" role="tab">Resin Leaf Earring</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content" id="productTabContent">
+                    <!-- Product Details Panels -->
+                    <div class="tab-pane fade show active" id="product0" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div id="gallery0" class="carousel slide mb-4" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="img/Crochet bag.jpeg" class="d-block w-100 rounded"
+                                                alt="Handmade Crochet Bag">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h2>Handmade Crochet Bag</h2>
+                                <div class="rating mb-3">
+                                    <span class="text-warning">★★★★☆</span>
+                                    <span>(18 reviews)</span>
+                                </div>
+                                <h3 class="text-primary mb-3">799 Rs</h3>
+                                <p>This stylish handmade crochet bag is perfect for everyday use. Durable, spacious, and
+                                    crafted with love. Available in multiple colors.</p>
+                                <div class="mb-3">
+                                    <label for="quantity0" class="form-label">Quantity:</label>
+                                    <input type="number" class="form-control w-25" id="quantity0" value="1" min="1">
+                                </div>
+                                <button class="btn btn-primary btn-lg add-to-cart"  data-id="1">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="product1" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="img/resin_earrings.png" class="d-block w-100 rounded mb-4"
+                                    alt="Resin Earrings">
+                            </div>
+                            <div class="col-md-6">
+                                <h2>Resin Earrings</h2>
+                                <div class="rating mb-3">
+                                    <span class="text-warning">★★★★★</span>
+                                    <span>(22 reviews)</span>
+                                </div>
+                                <h3 class="text-primary mb-3">499 Rs</h3>
+                                <p>Unique resin earrings with vibrant colors and lightweight design. Perfect for any
+                                    occasion.</p>
+                                <div class="mb-3">
+                                    <label for="quantity1" class="form-label">Quantity:</label>
+                                    <input type="number" class="form-control w-25" id="quantity1" value="1" min="1">
+                                </div>
+                                <button class="btn btn-primary btn-lg add-to-cart" data-id="2">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="product2" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="img/keychain.jpeg" class="d-block w-100 rounded mb-4" alt="Crochet Keychain">
+                            </div>
+                            <div class="col-md-6">
+                                <h2>Crochet Keychain</h2>
+                                <div class="rating mb-3">
+                                    <span class="text-warning">★★★★☆</span>
+                                    <span>(15 reviews)</span>
+                                </div>
+                                <h3 class="text-primary mb-3">199 Rs</h3>
+                                <p>Cute and colorful crochet keychain, perfect for bags and keys. Handmade with care.
+                                </p>
+                                <div class="mb-3">
+                                    <label for="quantity2" class="form-label">Quantity:</label>
+                                    <input type="number" class="form-control w-25" id="quantity2" value="1" min="1">
+                                </div>
+                                <button class="btn btn-primary btn-lg add-to-cart" data-id="3">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="product3" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="img/Crochet Bow Pouch - DIY Pattern.jpeg" class="d-block w-100 rounded mb-4"
+                                    alt="Crochet Pouch">
+                            </div>
+                            <div class="col-md-6">
+                                <h2>Crochet Pouch</h2>
+                                <div class="rating mb-3">
+                                    <span class="text-warning">★★★★☆</span>
+                                    <span>(10 reviews)</span>
+                                </div>
+                                <h3 class="text-primary mb-3">349 Rs</h3>
+                                <p>Handmade crochet pouch, ideal for storing small essentials. Soft, durable, and
+                                    stylish.</p>
+                                <div class="mb-3">
+                                    <label for="quantity3" class="form-label">Quantity:</label>
+                                    <input type="number" class="form-control w-25" id="quantity3" value="1" min="1">
+                                </div>
+                                <button class="btn btn-primary btn-lg add-to-cart" data-id="4">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="product4" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="img/resin_ring.png" class="d-block w-100 rounded mb-4" alt="Resin Ring">
+                            </div>
+                            <div class="col-md-6">
+                                <h2>Resin Ring</h2>
+                                <div class="rating mb-3">
+                                    <span class="text-warning">★★★★★</span>
+                                    <span>(8 reviews)</span>
+                                </div>
+                                <h3 class="text-primary mb-3">299 Rs</h3>
+                                <p>Trendy resin ring with a glossy finish. Lightweight and comfortable for daily wear.
+                                </p>
+                                <div class="mb-3">
+                                    <label for="quantity4" class="form-label">Quantity:</label>
+                                    <input type="number" class="form-control w-25" id="quantity4" value="1" min="1">
+                                </div>
+                                <button class="btn btn-primary btn-lg add-to-cart" data-id="5">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="product5" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="img/coster.jpeg" class="d-block w-100 rounded mb-4" alt="Crochet Coaster">
+                            </div>
+                            <div class="col-md-6">
+                                <h2>Crochet Coaster</h2>
+                                <div class="rating mb-3">
+                                    <span class="text-warning">★★★★☆</span>
+                                    <span>(12 reviews)</span>
+                                </div>
+                                <h3 class="text-primary mb-3">149 Rs</h3>
+                                <p>Handmade crochet coaster, adds charm to your table. Absorbent and easy to clean.</p>
+                                <div class="mb-3">
+                                    <label for="quantity5" class="form-label">Quantity:</label>
+                                    <input type="number" class="form-control w-25" id="quantity5" value="1" min="1">
+                                </div>
+                                <button class="btn btn-primary btn-lg add-to-cart" data-id="6">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="product6" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="img/pendent.jpeg" class="d-block w-100 rounded mb-4" alt="Resin Pendant">
+                            </div>
+                            <div class="col-md-6">
+                                <h2>Resin Pendant</h2>
+                                <div class="rating mb-3">
+                                    <span class="text-warning">★★★★★</span>
+                                    <span>(14 reviews)</span>
+                                </div>
+                                <h3 class="text-primary mb-3">399 Rs</h3>
+                                <p>Beautiful resin pendant with unique embedded designs. A perfect gift for loved ones.
+                                </p>
+                                <div class="mb-3">
+                                    <label for="quantity6" class="form-label">Quantity:</label>
+                                    <input type="number" class="form-control w-25" id="quantity6" value="1" min="1">
+                                </div>
+                                <button class="btn btn-primary btn-lg add-to-cart" data-id="7">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="product7" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="img/flowers.jpeg" class="d-block w-100 rounded mb-4" alt="Crochet Flower">
+                            </div>
+                            <div class="col-md-6">
+                                <h2>Crochet Flower</h2>
+                                <div class="rating mb-3">
+                                    <span class="text-warning">★★★★☆</span>
+                                    <span>(9 reviews)</span>
+                                </div>
+                                <h3 class="text-primary mb-3">99 Rs</h3>
+                                <p>Decorative crochet flower, perfect for crafts or as an accessory. Available in
+                                    various colors.</p>
+                                <div class="mb-3">
+                                    <label for="quantity7" class="form-label">Quantity:</label>
+                                    <input type="number" class="form-control w-25" id="quantity7" value="1" min="1">
+                                </div>
+                                <button class="btn btn-primary btn-lg add-to-cart" data-id="8">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="product8" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="img/resin_bracelet.png" class="d-block w-100 rounded mb-4"
+                                    alt="Resin Bracelet">
+                            </div>
+                            <div class="col-md-6">
+                                <h2>Resin Bracelet</h2>
+                                <div class="rating mb-3">
+                                    <span class="text-warning">★★★★★</span>
+                                    <span>(11 reviews)</span>
+                                </div>
+                                <h3 class="text-primary mb-3">449 Rs</h3>
+                                <p>Elegant resin bracelet with embedded flowers. Adjustable and comfortable fit.</p>
+                                <div class="mb-3">
+                                    <label for="quantity8" class="form-label">Quantity:</label>
+                                    <input type="number" class="form-control w-25" id="quantity8" value="1" min="1">
+                                </div>
+                                <button class="btn btn-primary btn-lg add-to-cart" data-id="9">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="product9" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="img/hat.jpeg" class="d-block w-100 rounded mb-4"  alt="Crochet Hat">
+                            </div>
+                            <div class="col-md-6">
+                                <h2>Crochet Hat</h2>
+                                <div class="rating mb-3">
+                                    <span class="text-warning">★★★★☆</span>
+                                    <span>(13 reviews)</span>
+                                </div>
+                                <h3 class="text-primary mb-3">599 Rs</h3>
+                                <p>Warm and stylish handmade crochet hat. Soft yarn, fits most sizes.</p>
+                                <div class="mb-3">
+                                    <label for="quantity9" class="form-label">Quantity:</label>
+                                    <input type="number" class="form-control w-25" id="quantity9" value="1" min="1">
+                                </div>
+                                <button class="btn btn-primary btn-lg add-to-cart" data-id="10">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="product10" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="img/broch.jpeg" class="d-block w-100 rounded mb-4" alt="Resin Brooch">
+                            </div>
+                            <div class="col-md-6">
+                                <h2>Resin Brooch</h2>
+                                <div class="rating mb-3">
+                                    <span class="text-warning">★★★★★</span>
+                                    <span>(7 reviews)</span>
+                                </div>
+                                <h3 class="text-primary mb-3">349 Rs</h3>
+                                <p>Handcrafted resin brooch with floral design. Adds elegance to any outfit.</p>
+                                <div class="mb-3">
+                                    <label for="quantity10" class="form-label">Quantity:</label>
+                                    <input type="number" class="form-control w-25" id="quantity10" value="1" min="1">
+                                </div>
+                                <button class="btn btn-primary btn-lg add-to-cart" data-id="11">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="product11" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="img/hairclip.jpeg" class="d-block w-100 rounded mb-4" alt="Crochet Hair clip">
+                            </div>
+                            <div class="col-md-6">
+                                <h2>Crochet Hairclip</h2>
+                                <div class="rating mb-3">
+                                    <span class="text-warning">★★★★☆</span>
+                                    <span>(16 reviews)</span>
+                                </div>
+                                <h3 class="text-primary mb-3">129 Rs</h3>
+                                <p>Soft and stretchy crochet scrunchie. Gentle on hair, available in many colors.</p>
+                                <div class="mb-3">
+                                    <label for="quantity11" class="form-label">Quantity:</label>
+                                    <input type="number" class="form-control w-25" id="quantity11" value="1" min="1">
+                                </div>
+                                <button class="btn btn-primary btn-lg add-to-cart" data-id="12">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="product12" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="img/Personalized Resin Bookmarks.jpeg" class="d-block w-100 rounded mb-4" alt="Resin Bookmarks">  ">
+                            </div>
+                            <div class="col-md-6">
+                                <h2>Resin Bookmark </h2>
+                                <div class="rating mb-3">
+                                    <span class="text-warning">★★★★☆</span>
+                                    <span>(16 reviews)</span>
+                                </div>
+                                <h3 class="text-primary mb-3">129 Rs</h3>
+                                <p>A practical and pretty way to mark your pages, with a smooth edge for comfortable reading.</p>
+                                <div class="mb-3">
+                                    <label for="quantity12" class="form-label">Quantity:</label>
+                                    <input type="number" class="form-control w-25" id="quantity12" value="1" min="1">
+                                </div>
+                                <button class="btn btn-primary btn-lg add-to-cart" data-id="15">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="product13" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="img/key.jpeg" class="d-block w-100 rounded mb-4" alt="Resin Keychain">
+                            </div>
+                            <div class="col-md-6">
+                                <h2>Resin Keychain</h2>
+                                <div class="rating mb-3">
+                                    <span class="text-warning">★★★★☆</span>
+                                    <span>(16 reviews)</span>
+                                </div>
+                                <h3 class="text-primary mb-3">799 Rs</h3>
+                                <p>Fun and functional resin keychains featuring bold, glossy alphabet letters.</p>
+                                <div class="mb-3">
+                                    <label for="quantity13" class="form-label">Quantity:</label>
+                                    <input type="number" class="form-control w-25" id="quantity13" value="1" min="1">
+                                </div>
+                                <button class="btn btn-primary btn-lg add-to-cart" data-id="13">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="product14" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="img/leaves.jpeg" class="d-block w-100 rounded mb-4" alt="Resin Earrngs">
+                            </div>
+                            <div class="col-md-6">
+                                <h2>Resin Leaf Earrings</h2>
+                                <div class="rating mb-3">
+                                    <span class="text-warning">★★★★☆</span>
+                                    <span>(16 reviews)</span>
+                                </div>
+                                <h3 class="text-primary mb-3">399 Rs</h3>
+                                <p>Elegant resin earrings shaped like slender leaves, capturing the translucence and subtle veining of real foliage</p>
+                                <div class="mb-3">
+                                    <label for="quantity14" class="form-label">Quantity:</label>
+                                    <input type="number" class="form-control w-25" id="quantity14" value="1" min="1">
+                                </div>
+                                <button class="btn btn-primary btn-lg add-to-cart" data-id="14">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Replace your current footer with this structure -->
+    <footer class="custom-footer bg-dark py-5 mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3 mb-3 mb-md-0">
+                    <h5>About Us</h5>
+                    <p>We are a premium e-commerce store offering unique handmade crochet items and resin jewelry at
+                        competitive prices.</p>
+                </div>
+                <div class="col-md-3 mb-3 mb-md-0">
+                    <h5>Office</h5>
+                    <address>
+                        123 Shop Street<br>
+                        Shopping District, SP 12345<br>
+                        info@shopease.com<br>
+                        (123) 456-7890
+                    </address>
+                </div>
+                <div class="col-md-3 mb-3 mb-md-0">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="product.html">Shop</a></li>
+                        <li><a href="details.html">Our product</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Newsletter</h5>
+                    <form class="d-flex mb-2">
+                        <input type="email" class="form-control me-2" placeholder="Your email" />
+                        <button class="btn btn-primary">Subscribe</button>
+                    </form>
+                    <div class="footer-social">
+                        <a href="#"><i class="fa-brands fa-facebook" style="color:  #2e6cd6;"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"style="color: #2e6cd6;"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin" style="color: #2e6cd6;"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p>&copy; 2025 ShopEase. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JS with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>

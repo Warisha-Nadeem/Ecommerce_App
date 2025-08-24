@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your E-Commerce Store</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <script src="https://kit.fontawesome.com/9f9385f8ca.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Pinyon+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Content will go here -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="home.html">ShopEase</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="details.html">Our Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="checkout.html">Checkout</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">Cart <span id="cart-count"
+                                class="badge bg-primary">0</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Banner -->
+    <section class="hero-banner bg-light py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 d-flex justify-content-center flex-column">
+                    <h1 class="display-4 fw-bold">Handmade Crochet & Resin Jewelry</h1>
+                    <p class="lead">Discover unique, handcrafted crochet items and beautiful resin-based jewelry.
+                        Perfect for gifting or treating yourself!</p>
+                    <a href="product.html" class="btn btn-primary btn-lg w-50">Shop Now</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="img/hero_banner.jpg" class="img-fluid rounded" alt="Promotional Banner">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Featured Products</h2>
+            <div id="featuredProductsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100">
+                                    <img src="img/key.jpeg" class="card-img-top" alt="Keychain">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Personalized Letter Charms</h5>
+                                        <p class="card-text">Fun and functional resin keychains featuring bold, glossy alphabet letters. .</p>
+                                        <p class="fw-bold">799 Rs</p>
+                                        <a href="details.html" class="btn btn-primary">Shop Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100">
+                                    <img src="img/resin_earrings.png" class="card-img-top" alt="Resin Earrings">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Resin Cherry Earrings </h5>
+                                        <p class="card-text">Playful resin earrings that capture a glossy cherry  suspended in crystal-clear resin. .</p>
+                                        <p class="fw-bold">499 Rs</p>
+                                        <a href="details.html" class="btn btn-primary">Shop Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100">
+                                    <img src="img/Personalized Resin Bookmarks.jpeg" class="card-img-top" alt="Crochet Keychain">
+                                    <div class="card-body">
+                                        <h5 class="card-title"> Resin Bookmarks </h5>
+                                        <p class="card-text">. A practical and pretty way to mark your pages, with a smooth edge for comfortable reading..</p>
+                                        <p class="fw-bold">199 Rs</p>
+                                        <a href="details.html" class="btn btn-primary">Shop Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100">
+                                    <img src="img/ear.jpeg" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Resin Flower Earrings</h5>
+                                        <p class="card-text">Charming resin flower earrings with multi-layered petals frozen in glassy resin.</p>
+                                        <p class="fw-bold">599 Rs</p>
+                                        <a href="details.html" class="btn btn-primary">Shop Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100">
+                                    <img src="img/leaves.jpeg" class="card-img-top" alt="Cute Leaves Earrings">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Resin Leaf Earrings</h5>
+                                        <p class="card-text">Elegant resin earrings shaped like slender leaves, capturing the translucence and subtle veining of real foliage.</p>
+                                        <p class="fw-bold">399 Rs</p>
+                                        <a href="details.html" class="btn btn-primary">Shop Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100">
+                                    <img src="img/Pressed Flower Bangle, Real Flower Bangle, Resin Bangle, Botanical Jewellery, Real Flower Bracelet, Pressed Flowers Bracelets, Blue Bangle - Etsy.jpeg" class="card-img-top" alt="Pressed Flower Bangle">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Resin Flower Ring</h5>
+                                        <p class="card-text">A delicate ring featuring a lifelike resin flower encased in crystal-clear resin. .</p>
+                                        <p class="fw-bold">299 Rs</p>
+                                        <a href="details.html" class="btn btn-primary">Shop Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more slides as needed -->
+                </div>
+                <!-- Carousel controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#featuredProductsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#featuredProductsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Replace your current footer with this structure -->
+    <footer class="custom-footer bg-dark py-5 mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3 mb-3 mb-md-0">
+                    <h5>About Us</h5>
+                    <p>We are a premium e-commerce store offering unique handmade crochet items and resin jewelry at
+                        competitive prices.</p>
+                </div>
+                <div class="col-md-3 mb-3 mb-md-0">
+                    <h5>Office</h5>
+                    <address>
+                        123 Shop Street<br>
+                        Shopping District, SP 12345<br>
+                        info@shopease.com<br>
+                        (123) 456-7890
+                    </address>
+                </div>
+                <div class="col-md-3 mb-3 mb-md-0">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="product.html">Shop</a></li>
+                        <li><a href="details.html">Our product</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Newsletter</h5>
+                    <form class="d-flex mb-2">
+                        <input type="email" class="form-control me-2" placeholder="Your email" />
+                        <button class="btn btn-primary">Subscribe</button>
+                    </form>
+                    <div class="footer-social">
+                        <a href="#"><i class="fa-brands fa-facebook" style="color:  #2e6cd6;"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"style="color: #2e6cd6;"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin" style="color: #2e6cd6;"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p>&copy; 2025 ShopEase. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JS with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>

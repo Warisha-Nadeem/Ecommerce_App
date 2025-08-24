@@ -1,0 +1,522 @@
+/* Resin Pastel Theme Inspired by Reference Image */
+
+body {
+    background: linear-gradient(120deg, #f7faff 0%, #ffe4f7 100%);
+    color: #2d2d2d;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+.hero-banner {
+    background: linear-gradient(135deg, #f7faff 0%, #ffe4f7 100%);
+    border-radius: 24px;
+    margin-top: 20px;
+    box-shadow: 0 4px 32px rgba(173, 216, 230, 0.12);
+}
+.hero-banner h1 {
+    font-family: 'Pinyon Script', 'Pacifico' ,cursive;
+    font-size: 3rem;
+    color: #3a7bd5; /* Optional: blue accent */
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.card,
+.product-card,
+.shopping-cart .card,
+.checkout .card {
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 4px 24px rgba(173, 216, 230, 0.12);
+    background: linear-gradient(120deg, #fff 80%, #e3f0ff 100%);
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 0.5rem; /* Reduced padding */
+    min-height: 370px; /* Smaller card height */
+}
+
+.card:hover,
+.product-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 40px rgba(255, 182, 193, 0.18);
+}
+
+.card-title,
+.shopping-cart .card-title,
+.checkout .card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #3a7bd5;
+    margin-bottom: 0.5rem;
+}
+
+.card .fw-bold,
+.product-card .fw-bold {
+    color: #ff69b4;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.card-text {
+    color: #6c6c6c;
+    font-size: 1rem;
+}
+
+.product-card img,
+.card-img-top {
+    border-radius: 18px 18px 0 0;
+    background: transparent; /* Remove blue background */
+    border: none;
+    height: 270px;         /* Increased image height */
+    min-height: 270px;
+    max-height: 270px;
+    width: 100%;
+    object-fit: cover;     /* Ensures image fills area */
+    margin: 0;             /* Remove extra margin */
+    box-shadow: 0 2px 12px rgba(58,123,213,0.07); /* Soft shadow for depth */
+}
+
+.btn-primary,
+.shopping-cart .btn-primary,
+.checkout .btn-primary {
+    background: linear-gradient(90deg, #3a7bd5 0%, #ff69b4 100%);
+    border: none;
+    border-radius: 16px;
+    font-weight: 600;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(58, 123, 213, 0.10);
+    font-size: 1.1rem;
+    padding: 10px 0;
+        width: 90%;      /* Increase button width */
+
+}
+.card .btn,
+.product-card .btn {
+    width: 90%;      /* Increase button width */
+    display: block;  /* Make button take up the width */
+    margin: 0 auto;  /* Center the button horizontally */
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, #ff69b4 0%, #3a7bd5 100%);
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(58, 123, 213, 0.18);
+}
+
+.quantity-input,
+input[type="number"] {
+    width: 60px;
+    border-radius: 12px;
+    border: 1.5px solid #3a7bd5;
+    padding: 6px 10px;
+    background: #f7faff;
+    color: #2d2d2d;
+    font-size: 1.1rem;
+    text-align: center;
+}
+.product-section-title {
+    font-family: 'Pacifico',"Pinyon Script","Viaoda Libre", cursive;
+    font-size: 2.2rem;
+    color: #ff69b4;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+.table {
+    background: linear-gradient(120deg, #fff 80%, #e3f0ff 100%);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(173, 216, 230, 0.10);
+}
+
+.table th,
+.table td {
+    border: none;
+    padding: 1rem 0.75rem;
+    vertical-align: middle;
+    color: #2d2d2d;
+    font-size: 1.05rem;
+    background: transparent;
+}
+
+.card-header {
+    background: #e3f0ff;
+    border-radius: 28px 28px 0 0;
+    font-weight: 700;
+    color: #3a7bd5;
+    border-bottom: 1px solid #ffe4f7;
+}
+
+.card-body {
+    background: transparent;
+}
+
+.form-select,
+.form-control,
+textarea {
+    border-radius: 12px;
+    border: 1.5px solid #3a7bd5;
+    background: #f7faff;
+    color: #2d2d2d;
+    font-size: 1.05rem;
+}
+
+.form-check-input:checked {
+    background-color: #ff69b4;
+    border-color: #ff69b4;
+}
+
+.carousel-inner img {
+    border-radius: 24px;
+    background: #e3f0ff;
+}
+
+.rating span.text-warning {
+    color: #ff69b4 !important;
+    font-size: 1.2rem;
+}
+
+/* Navbar Styling - Light Resin Colors */
+.navbar {
+    background: linear-gradient(90deg, #f7faff 0%, #ffe4f7 100%);
+    border-bottom: 1px solid #e3f0ff;
+    box-shadow: 0 2px 12px rgba(173, 216, 230, 0.08);
+}
+.navbar .navbar-brand {
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    color: #3a7bd5 !important;
+    letter-spacing: 2px;
+}
+.navbar .nav-link {
+    color: #3a7bd5 !important;
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-right: 1rem;
+    transition: color 0.2s;
+}
+.navbar .nav-link:hover {
+    color: #ff69b4 !important;
+    text-decoration: underline;
+}
+.navbar .badge {
+    background: #ff69b4;
+    color: #fff;
+    font-weight: 700;
+}
+
+/* Footer Styling - Light Resin Colors */
+footer {
+    background: linear-gradient(90deg, #f7faff 0%, #ffe4f7 100%);
+    color: #3a7bd5;
+    border-top: 1px solid #e3f0ff;
+    box-shadow: 0 -2px 12px rgba(173, 216, 230, 0.08);
+}
+footer h5 {
+    color: #ff69b4;
+    font-family: 'Pacifico', cursive;
+    font-size: 1.3rem;
+}
+footer a {
+    color: #3a7bd5;
+    text-decoration: underline;
+    font-weight: 500;
+}
+footer address,
+footer p,
+footer ul {
+    color: #3a7bd5;
+}
+footer .text-center {
+    color: #ff69b4;
+}
+
+/* Checkout Form Styling */
+.checkout .card {
+    border-radius: 32px;
+    background: #fff;
+    box-shadow: 0 8px 32px rgba(58, 123, 213, 0.10);
+    border: none;
+    margin-bottom: 2rem;
+}
+.checkout .card-header {
+    background: transparent;
+    color: #3a7bd5;
+    border-radius: 32px 32px 0 0;
+    font-family: 'Pacifico', cursive;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+.checkout .card-body {
+    background: transparent;
+    padding: 2rem 2rem 1rem 2rem;
+}
+.checkout .form-label {
+    color: #3a7bd5;
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+}
+.checkout .form-control,
+.checkout textarea {
+    border-radius: 16px;
+    border: 1.5px solid #e3f0ff;
+    background: #f7faff;
+    color: #2d2d2d;
+    font-size: 1.08rem;
+    box-shadow: 0 1px 4px rgba(58, 123, 213, 0.05);
+    margin-bottom: 1.2rem;
+    transition: border-color 0.2s;
+    padding: 12px 16px;
+}
+.checkout .form-control:focus,
+.checkout textarea:focus {
+    border-color: #3a7bd5;
+    outline: none;
+}
+.checkout .form-check-input {
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    margin-right: 8px;
+    border: 2px solid #ff69b4;
+    background: #f7faff;
+}
+.checkout .form-check-input:checked {
+    background-color: #ff69b4;
+    border-color: #ff69b4;
+}
+.checkout .form-check-label {
+    color: #3a7bd5;
+    font-weight: 500;
+    font-size: 1.08rem;
+    margin-bottom: 0.5rem;
+}
+.checkout .btn-primary {
+    background: linear-gradient(90deg, #ffe4f7 0%, #3a7bd5 100%);
+    border: none;
+    border-radius: 18px;
+    font-weight: 700;
+    color: #fff;
+    font-size: 1.15rem;
+    padding: 14px 0;
+    box-shadow: 0 4px 24px rgba(255, 182, 193, 0.18);
+    margin-top: 1.5rem;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.checkout .btn-primary:hover {
+    background: linear-gradient(90deg, #3a7bd5 0%, #ffe4f7 100%);
+    color: #fff;
+    box-shadow: 0 8px 32px rgba(58, 123, 213, 0.18);
+}
+.checkout .card-title {
+    color: #ff69b4;
+    font-family: 'Pacifico', cursive;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.checkout #checkout-summary {
+    font-size: 1.08rem;
+    color: #2d2d2d;
+    background: #f7faff;
+    border-radius: 16px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.checkout #checkout-summary .fw-bold {
+    color: #3a7bd5;
+    font-weight: 700;
+}
+
+/* Payment icons row (optional, if you add icons) */
+.checkout .payment-icons {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 1.2rem;
+}
+.checkout .payment-icons img {
+    height: 32px;
+    width: auto;
+    filter: grayscale(0.2);
+}
+
+/* Carousel Control Styling */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(90deg, #3a7bd5 0%, #ff69b4 100%);
+    border-radius: 50%;
+    border: 2px solid #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.9;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-control-prev {
+    left: -25px;
+}
+
+.carousel-control-next {
+    right: -25px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+    background-size: 100%, 100%;
+    background-position: center;
+    filter: brightness(0) invert(1);
+}
+
+/* Product Detail Styling */
+.product-detail .tab-pane {
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(173,216,230,0.10);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+.product-detail h2 {
+    font-family: 'Pacifico', cursive;
+    color: #3a7bd5;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.product-detail .rating {
+    margin-bottom: 1rem;
+}
+.product-detail .btn-primary {
+    margin-top: 1rem;
+}
+
+/* Custom Footer Style */
+.custom-footer {
+    background: linear-gradient(90deg, #f7faff 0%, #ffe4f7 100%);
+    color: #3a7bd5;
+    border-top: 1px solid #e3f0ff;
+    box-shadow: 0 -2px 12px rgba(173, 216, 230, 0.08);
+    border-top-left-radius: 60px;
+    margin-top: 40px;
+    padding-top: 40px;
+}
+
+.custom-footer h5 {
+    color: #ff69b4;
+    font-family: 'Pacifico', cursive;
+    font-size: 1.3rem;
+}
+
+.custom-footer a {
+    color: #3a7bd5;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.custom-footer address,
+.custom-footer p,
+.custom-footer ul {
+    color: #3a7bd5;
+}
+
+.custom-footer .footer-social a {
+    display: inline-block;
+    margin-right: 12px;
+    transition: transform 0.2s;
+}
+
+.custom-footer .footer-social img {
+    width: 28px;
+    height: 28px;
+    filter: grayscale(0.2);
+}
+
+.custom-footer .footer-social a:hover img {
+    transform: scale(1.1);
+    filter: none;
+}
+
+.custom-footer form input[type="email"] {
+    border-radius: 16px;
+    border: 1.5px solid #3a7bd5;
+    background: #f7faff;
+    color: #2d2d2d;
+    font-size: 1rem;
+}
+
+.custom-footer form .btn-primary {
+    border-radius: 16px;
+    font-size: 1rem;
+    padding: 8px 18px;
+    margin-left: 4px;
+}
+
+/* Product Selector Tab Styling */
+#productTab {
+    background: linear-gradient(90deg, #f7faff 0%, #ffe4f7 100%);
+    border-radius: 24px;
+    box-shadow: 0 2px 16px rgba(173,216,230,0.10);
+    padding: 1rem 0.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+#productTab .nav-item {
+    margin-bottom: 8px;
+}
+
+#productTab .nav-link {
+    background: linear-gradient(90deg, #e3f0ff 0%, #ffe4f7 100%);
+    color: #3a7bd5;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 10px 22px;
+    margin: 0 4px;
+    border: 2px solid #e3f0ff;
+    box-shadow: 0 2px 8px rgba(255,182,193,0.08);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+#productTab .nav-link.active,
+#productTab .nav-link:focus,
+#productTab .nav-link:hover {
+    background: linear-gradient(90deg, #ff69b4 0%, #3a7bd5 100%);
+    color: #fff;
+    border-color: #ff69b4;
+    box-shadow: 0 4px 16px rgba(58,123,213,0.12);
+    text-decoration: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .checkout .card {
+        border-radius: 18px;
+        padding: 1rem;
+    }
+    .checkout .card-body {
+        padding: 1rem;
+    }
+}
+
+.product-detail img,
+.product-detail .carousel-inner img {
+    max-height: 320px;
+    width: 100%;
+    object-fit: contain;
+    background: #e3f0ff;
+    border-radius: 24px;
+}
