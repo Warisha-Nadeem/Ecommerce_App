@@ -265,7 +265,7 @@ function setupCheckoutForm() {
         localStorage.removeItem('cart');
         cart = [];
         updateCart();
-        window.location.href = 'home.html';
+        window.location.href = 'index.html';
     });
     
     renderCheckoutSummary();
